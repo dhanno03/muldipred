@@ -78,13 +78,13 @@ def contact():
 def ValuePredictor(to_predict_list, size):
     to_predict = np.array(to_predict_list).reshape(1,size)
     if(size==8):#Diabetes
-        loaded_model = joblib.load("website\model")
+        loaded_model = joblib.load("website/model")
         result = loaded_model.predict(to_predict)
     elif(size==30):#Cancer
-        loaded_model = joblib.load("website\model1")
+        loaded_model = joblib.load("website/model1")
         result = loaded_model.predict(to_predict)
     elif(size==11):#Heart
-        loaded_model = joblib.load("website\model2")
+        loaded_model = joblib.load("website/model2")
         result =loaded_model.predict(to_predict)
     return result[0]
 
