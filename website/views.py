@@ -10,7 +10,7 @@ import os
 
 views = Blueprint('views', __name__)
 
-with open('website\model4.pkl','rb') as f:
+with open('website/model4.pkl','rb') as f:
     filename = pickle.load(f)
 
 @views.route('/', methods=['GET', 'POST'])
